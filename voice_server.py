@@ -37,7 +37,11 @@ async def entrypoint(ctx: agents.JobContext):
                     voice_id="pzxut4zZz4GImZNlqQ3H",
                     model="eleven_multilingual_v2"
                 ),
-                vad=silero.VAD.load(),
+                vad = silero.VAD.load(
+    activation_threshold=0.6,          # Reduce false triggers
+    min_speech_duration=0.3,          # Detect short utterances
+    min_silence_duration=0.6,          # Balance responsiveness and natural pauses
+),
                 
             )
         except Exception as e:
