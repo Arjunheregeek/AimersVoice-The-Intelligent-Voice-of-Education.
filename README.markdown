@@ -61,7 +61,7 @@ Feel free to reach out if you have any questions or want to collaborate on excit
 ## Usage 🎙️
 1. **Run the Application**:
    ```bash
-   python voice_server.py
+   python voice_server.py console
    ```
    This starts the LiveKit Agents worker, initializes the vector database index, and begins listening for voice inputs.
 
